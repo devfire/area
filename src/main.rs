@@ -11,7 +11,7 @@ struct Rectangle {
     bottom_right: Point,
 }
 
-fn rect_area(rect: Rectangle) -> f32 {
+fn rect_area(rect: &Rectangle) -> f32 {
     rect.top_left.y * rect.bottom_right.x
 }
 
@@ -32,5 +32,5 @@ fn main() {
         bottom_right: bottom_right_point,
     };
 
-    println!("Area of rectangle is {}", rect_area(rectangle))
+    println!("Area of rectangle is {}", rect_area(&rectangle))
 }
