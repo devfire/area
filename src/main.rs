@@ -1,4 +1,4 @@
-use crate::rectangle::Rectangle;
+use crate::rectangle::{Rectangle, Point};
 
 mod rectangle;
 
@@ -14,7 +14,7 @@ fn main() {
         y: 0.0,
     };
 
-    let rectangle = Rectangle { field1: top_left_point, field2: bottom_right_point };
+    let rectangle = Rectangle { top_left: top_left_point, bottom_right: bottom_right_point };
 
-    println!("Area of rectangle is {}", rect_area(&rectangle))
+    println!("Area of rectangle is {}", (&rectangle.area()))
 }
