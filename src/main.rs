@@ -1,19 +1,6 @@
+use crate::rectangle::Rectangle;
 
-// Define a point in a 2D space
-struct Point {
-    x: f32,
-    y: f32,
-}
-
-// A rectangle has two defining end points
-struct Rectangle {
-    top_left: Point,
-    bottom_right: Point,
-}
-
-fn rect_area(rect: &Rectangle) -> f32 {
-    rect.top_left.y * rect.bottom_right.x
-}
+mod rectangle;
 
 fn main() {
     println!("Hello, world!");
@@ -27,10 +14,7 @@ fn main() {
         y: 0.0,
     };
 
-    let rectangle = Rectangle {
-        top_left: top_left_point,
-        bottom_right: bottom_right_point,
-    };
+    let rectangle = Rectangle { field1: top_left_point, field2: bottom_right_point };
 
     println!("Area of rectangle is {}", rect_area(&rectangle))
 }
