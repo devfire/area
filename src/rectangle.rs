@@ -19,7 +19,5 @@ impl Rectangle {
 
     pub fn area(&self) -> f32 {
         (self.top_left.x - self.bottom_right.x) * (self.top_left.y - self.bottom_right.y)
-
-        // unimplemented!()
     }
 }
